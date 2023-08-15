@@ -95,3 +95,7 @@ nav {
 .btn:hover {
 	opacity: 0.8;
 }
+
+.nav-links li  a.active {
+	font-weight: 700;
+}
