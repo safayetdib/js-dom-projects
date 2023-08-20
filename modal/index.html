@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="style.css" />
+		<title>JS Modal</title>
+	</head>
+	<body>
+		<button
+			data-modal-target="#modal"
+			class="open-modal">
+			Open Modal
+		</button>
+
+		<div
+			class="modal"
+			id="modal">
+			<div class="modal-header">
+				<h2 class="title">Example Modal</h2>
+				<button
+					data-close-button
+					class="close-button">
+					&times;
+				</button>
+			</div>
+
+			<div class="modal-body">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa itaque
+				quae molestias excepturi voluptatem, cupiditate voluptate architecto
+				quas ipsam quidem ratione eligendi minus. Enim aut tempore ratione,
+				quisquam porro sint atque, sed assumenda doloremque ipsum explicabo
+				consequatur velit deserunt hic recusandae itaque! Quae neque expedita
+				voluptatibus autem accusantium necessitatibus pariatur totam, fugit
+				perspiciatis sequi odio consequuntur sunt veritatis ullam! Nulla error
+				sapiente atque cumque harum placeat unde dolorum maxime ut fugit.
+				Mollitia aut excepturi enim qui omnis maxime nesciunt dicta!
+			</div>
+		</div>
+
+		<div
+			id="overlay"
+			class=""></div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
