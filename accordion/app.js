@@ -1,6 +1,54 @@
+const faqData = [
+	{
+		question: 'What is JavaScript?',
+		answer:
+			'JavaScript is a programming language that enables interactive web pages.',
+	},
+	{
+		question: 'What is the DOM?',
+		answer:
+			'The Document Object Model (DOM) is a programming interface for web documents.',
+	},
+	{
+		question: 'How do you loop in JavaScript?',
+		answer:
+			"You can use loops like 'for', 'while', and 'forEach' to iterate over data.",
+	},
+];
+
+const container = document.querySelector('.container');
 const toggles = document.getElementsByClassName('toggle');
 const contentDiv = document.getElementsByClassName('content');
 const icons = document.getElementsByClassName('icon');
+
+const createWrapperElement = (faq) => {
+	const wrapper = document.createElement('div');
+	wrapper.className = 'wrapper';
+
+	const toggle = document.createElement('button');
+	toggle.className = 'toggle';
+	toggle.textContent = faq.question;
+
+	const icon = document.createElement('i');
+	icon.className = 'fa-solid fa-plus icon';
+	toggle.appendChild(icon);
+
+	const content = document.createElement('div');
+	const answer = document.createElement('p');
+	content.className = 'content';
+	answer.textContent = faq.answer;
+	content.appendChild(answer);
+
+	wrapper.appendChild(toggle);
+	wrapper.appendChild(content);
+
+	return wrapper;
+};
+
+faqData.forEach((faq) => {
+	const wrapper = createWrapperElement(faq);
+	container.appendChild(wrapper);
+});
 
 for (let i = 0; i < toggles.length; i++) {
 	toggles[i].addEventListener('click', () => {
